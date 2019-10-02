@@ -1,2 +1,2 @@
 # triangle
-A contiguity checker for triangles
+A congruity checker for triangles
