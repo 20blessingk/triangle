@@ -1,0 +1,17 @@
+hit shift right click
+Open PowerShell Window here
+type in powershell
+
+pyinstaller -w {name of file}
+
+navigate to dist folder
+the next folder that shows
+and scroll down a little untill you find your python file in a .exe format
+
+if you want to add an icon
+place a .ico file in with the original file
+and instead type
+
+pyinstaller -i {icon file name} {python file name}
+
+done
