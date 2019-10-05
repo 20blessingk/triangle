@@ -1,61 +1,34 @@
 #Made by Kyle Blessing
 ### TRIANGLE CONGRUITY CHECKER ###
+import random
+#from graphics import *
 
-from graphics import *
+ABC = ["A","B","C"]
+XYZ = ["X","Y","Z"]
 
-def main():
-    win = GraphWin('Draw a Triangle', 800, 600)
-    '''
- #   win.yUp() # right side up coordinates
-    win.setBackground('yellow')
-    message = Text(Point(win.getWidth()/2, 30), 'Click on three points')
-    message.setTextColor('red')
-    message.setStyle('italic')
-    message.setSize(20)
-    message.draw(win)
+def angle(angle1,angle2):
+    print("Angle " + str(angle1) + " = Angle " + str(angle2))
+def seg(side1,side2, side3,side4):
+    print(side1 + side2 + " = " + side3 + side4)
 
-    # Get and draw three vertices of triangle
-    p1 = win.getMouse()
-    p1.draw(win)
-    p2 = win.getMouse()
-    p2.draw(win)
-    p3 = win.getMouse()
-    p3.draw(win)
-    vertices = [p1, p2, p3]
+def triangle():
+    a,b,c = random.sample(ABC,3)
+    x,y,z = random.sample(XYZ,3)
 
-    # Use Polygon object to draw the triangle
-    triangle = Polygon(vertices)
-    triangle.setFill('gray')
-    triangle.setOutline('cyan')
-    triangle.setWidth(4)  # width of boundary line
-    triangle.draw(win)
-    '''
+    a1,b1,c1 = random.sample(ABC,3)
+    x1,y1,z1 = random.sample(XYZ,3)
 
-    instructions = Text(Point(win.getWidth()/2, 40),
-                                        "Enter your name.\nThen click the mouse.")
-    instructions.draw(win)
+    angle(a,x)
+    angle(b,y)
+    angle(c,z)
 
-    entry1 = Entry(Point(win.getWidth()/2, 200),10)
-    entry1.draw(win)
+    seg(a1,b1,x1,y1)
+    seg(a1,c1,x1,z1)
+    seg(b1,c1,y1,z1) 
 
-    Text(Point(win.getWidth()/2, 230),'Name:').draw(win) # label for the Entry
-    
-    win.getMouse()  # To know the user is finished with the text.
+    ans = input("Triangle ABC is congruent to Triangle > ")
+    print(ans)
 
-    name = entry1.getText() 
 
-    greeting1 = 'Hello, ' + name + '!'
-    Text(Point(win.getWidth()/3, 150), greeting1).draw(win)
-                     
-    greeting2 = 'Bonjour, ' + name + '!'
-    Text(Point(2*win.getWidth()/3, 100), greeting2).draw(win)
-
-    instructions = Text(Point(win.getWidth()/2, 30), 'Click on three points')
-    instructions.draw(win)
-    
-    instructions.setText('Click anywhere to quit') # change text message
-    win.getMouse()
-    win.close() 
-
-main()
+triangle()
 
