@@ -26,6 +26,9 @@ def triangle():
     seg(a1,c1,x1,z1)
     seg(b1,c1,y1,z1) 
 
+#a1 does not always mean a1 = A -----------------------fix this
+#need to return the value
+
     if a1 == x1 and b1 == y1:
         return "XYZ"
     if a1 == x1 and b1 == z1:
@@ -42,7 +45,7 @@ def triangle():
 triangle()
 ans = input("Triangle ABC is congruent to Triangle > ")
 if ans == triangle():
-    print("Correct")
+    print("Correct") #--------------------------------------something is wrong here
 else:
     print(f"Wrong, the answer is {triangle()}")
 
