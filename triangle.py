@@ -26,9 +26,26 @@ def triangle():
     seg(a1,c1,x1,z1)
     seg(b1,c1,y1,z1) 
 
-    ans = input("Triangle ABC is congruent to Triangle > ")
-    print(ans)
-
+    if a1 == x1 and b1 == y1:
+        return "XYZ"
+    if a1 == x1 and b1 == z1:
+        return "XZY"
+    if a1 == y1 and b1 == x1:
+        return "YXZ"
+    if a1 == y1 and b1 == z1:
+        return "YZX"
+    if a1 == z1 and b1 == y1:
+        return "ZYX"
+    if a1 == z1 and b1 == x1:
+        return "ZXY"
 
 triangle()
+ans = input("Triangle ABC is congruent to Triangle > ")
+if ans == triangle():
+    print("Correct")
+else:
+    print(f"Wrong, the answer is {triangle()}")
+
+
+
 

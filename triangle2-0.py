@@ -1,3 +1,4 @@
+#definitely NOT made by Kyle but its pretty helpful 
 def cong_sas(s1, s2, a1, a2):  
        
     s1 = [float(i) for i in s1] 
