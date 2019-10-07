@@ -44,10 +44,10 @@ def triangle():
 
 triangle()
 ans = input("Triangle ABC is congruent to Triangle > ")
-if ans == triangle():
+if ans == "XYZ":
     print("Correct") #--------------------------------------something is wrong here
 else:
-    print(f"Wrong, the answer is {triangle()}")
+    print("Wrong, the answer is ")
 
 
 
