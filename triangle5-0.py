@@ -1,7 +1,8 @@
 #made by Kyle Blessing
 import random
+from graphics import *
 
-choices = ["XYZ","XZY","YXZ","YZX","ZYX","ZXY"]
+choices = ["XYZ"''',"XZY","YXZ","YZX","ZYX","ZXY"''']
 
 def angle(angle1,angle2):
     return ("Angle " + str(angle1) + " = Angle " + str(angle2))
@@ -9,6 +10,8 @@ def seg(side1,side2, side3,side4):
     return (side1 + side2 + " = " + side3 + side4)
 
 def triangle():
+    win = GraphWin("Triangle Congruency", 800,600)
+    win.setBackground('white')
     a,b,c = "A","B","C"
     x,y,z = "X","Y","Z"
     val = random.choice(choices)
@@ -21,7 +24,8 @@ def triangle():
         z1 = seg(b,c,y,z)
         list1 = [a1,b1,c1,x1,y1,z1]
         opt1 = random.sample(list1,6)
-        print(*opt1, sep = "\n" )
+        message1 = Text(Point(400,300), *opt1 )
+        message1.draw(win)
         return "XYZ"
     if val == choices[1]:
         a2 = angle(a,x)
